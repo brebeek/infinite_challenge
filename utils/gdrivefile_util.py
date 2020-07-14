@@ -45,8 +45,7 @@ def upload_file(file_name, drive_service, folder_name, file_path, file_mime_type
     file = drive_service.files().create(body=file_metadata,
                                         media_body=media,
                                         fields='id').execute()
-    print(file)
-
+    print(f"Successfully uploaded file {file_name} to {folder_name}.")
 
 
 def authenticate():
